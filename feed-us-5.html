@@ -1,0 +1,23 @@
+<div id="container"></div>
+<script>
+    window.RufflePlayer = window.RufflePlayer || {};
+    window.RufflePlayer.config = {
+        autoplay: "on",
+        contextMenu: false,
+        unmuteOverlay: "hidden",
+    };
+    document.addEventListener("DOMContentLoaded", function() {
+        let swf = '.swf';
+        if (swf) {
+            let ruffle = window.RufflePlayer.newest();
+            let player = Object.assign(document.getElementById("container").appendChild(ruffle.createPlayer()), {
+                style: 'width: 100%; height: 625px',
+            });
+            player.load({
+                url: 'https://1000freegames.github.io/ubg76/feed-us-5.swf'
+            });
+
+        }
+    });
+</script>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
