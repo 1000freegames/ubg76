@@ -11,7 +11,7 @@
         if (swf) {
             let ruffle = window.RufflePlayer.newest();
             let player = Object.assign(document.getElementById("container").appendChild(ruffle.createPlayer()), {
-                style: 'width: 100%; height: 625px',
+                style: 'width: 100%; height: 100%',
             });
             player.load({
                 url: 'https://1000freegames.github.io/ubg76/feed-us-5.swf'
